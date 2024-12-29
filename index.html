@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Quiz Challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="quiz-heading">Programming Quiz Challenge</h1>
+        <div id="participantForm">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" class="input-large" required><br><br>
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" class="input-large" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="input-large" required><br><br>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="quiz" class="hidden">
+            <p id="question" class="question"></p>
+            <div class="options" id="options"></div>
+            <button class="hidden" id="nextButton" onclick="nextQuestion()">Next Question</button>
+            <button class="hidden" id="submitButton" onclick="submitQuiz()">Submit</button>
+        </div>
+        <div id="result" class="hidden">
+            <h3 id="completionMessage" class="completion-message"></h3>
+            <p id="attemptMessage"></p>
+            <p id="resultMessage" class="hidden"></p>
+            <button class="hidden" id="showScoreButton" onclick="showScore()">Show Score</button>
+            <button id="retakeButton" class="hidden" onclick="retakeQuiz()">Retake Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
